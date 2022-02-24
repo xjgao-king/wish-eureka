@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: wish-eureka
+server:
+  port: 2001
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+  server:
+    enable-self-preservation: false
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:2002/eureka

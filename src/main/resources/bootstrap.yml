@@ -1,0 +1,11 @@
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: /Users/gaoxiaojin/logs/wish-eureka
+spring:
+  cloud:
+    inetutils:
+      ignored-interfaces:
+        - VM.*
+      preferred-networks:
+        - 121\.199\.67\..+
